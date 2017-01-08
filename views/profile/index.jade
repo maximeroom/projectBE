@@ -1,0 +1,12 @@
+extends layout
+block content
+    .bigsentence Welcome back !{nickname}
+    .smallsentence
+        | You currently have
+        ="  "
+        span.highlight= points
+        |  points
+    .smallsentence
+        | That makes you #
+        span.highlight= rank
+        |  in the rankings

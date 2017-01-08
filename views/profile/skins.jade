@@ -1,0 +1,16 @@
+extends layout
+block content
+    h1 Skins (points: !{user.points})
+    each skin in skins
+        .skin
+            .title= skin.title
+            .picture
+                img(src="../../assets/img/"+skin.image)
+            .unlock You need !{skin.points} points to use this skin
+            if user.points >= skin.points
+                if user.skin_id == skin._id
+                    .currentskin Current skin
+                else
+                    a(class="alreadyunlocked" href="/profile/skinupdate?id="+skin._id) Select
+            else
+                .notyetunlocked Not yet unlocked

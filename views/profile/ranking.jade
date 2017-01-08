@@ -1,0 +1,23 @@
+extends layout
+block content
+    - var i=1
+    h1 Ranking
+    table
+        tr
+            th(width="25%") Rank
+            th(width="45%") Nickname
+            th(width="30%") Points
+        each user in users
+            if nn == user.nickname
+                tr(class="myrow")
+                    td= i
+                    td= user.nickname
+                    td= user.points
+            else
+                tr
+                    td= i
+                    td= user.nickname
+                    td= user.points
+            - i++
+
+

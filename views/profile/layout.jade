@@ -1,0 +1,29 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        link(rel='stylesheet', href='../css/style.css')
+        title Airhockey Online
+    body.theme
+        #background
+            header
+                #header-cont
+                    .menuleft
+                        ul
+                            li
+                                a(href='/profile')
+                                    span(style='color:#1c38ef') Airhockey
+                                    span(style='color:#fff') Online
+                            li
+                                a(href='/profile/ranking') Ranking
+                            li
+                                a(href='/profile/skins') Skins
+                    .menuright
+                        ul
+                            li
+                                a(href='/signout') Logout
+            #playcontainer
+                a(class="btn" href="/game/play") Play
+            #content
+                block content
+            footer Airhockey Online 2017 - Created by Maxime Room

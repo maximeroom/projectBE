@@ -1,0 +1,22 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        link(rel='stylesheet', href='../css/style.css')
+        title Airhockey Online
+    body.theme
+        #background
+            #gamewrapper
+                #bordercanvas
+                    canvas(id="gamecanvas", width=800, height=800)
+                    span(id="textoverlay")
+                #sidepanel
+                    #first(class="playerpanel")
+                        #firstnickname(class="nickname")
+                        #firstpoints(class="points")
+                    #second(class="playerpanel")
+                        #secondnickname(class="nickname")
+                        #secondpoints(class="points")
+        #overlay
+        script(src="/socket.io/socket.io.js")
+        script(src="/js/game.js")

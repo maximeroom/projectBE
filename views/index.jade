@@ -1,0 +1,28 @@
+extends layout
+block content
+    #background
+        .container
+            .title
+                span(class="t1") Airhockey
+                ="  "
+                span(class="t2") Online
+            .playnow
+                form(action="/game", method="post")
+                    section(class="minititle") Play against a random opponent
+                    input(type="text", placeholder="Nickname", name="nickname")
+                    br
+                    input(type="submit", value="Play", name="play")
+            .signin
+                form(action="/signin", method="post")
+                    section(class="minititle") Sign in for full access!
+                    input(type="text", placeholder="Nickname", name="nickname")
+                    br
+                    input(type="password", placeholder="Password", name="password")
+                    br
+                    input(type="submit", value="Sign in", name="signin")
+                    br
+                    a(href="/register") Sign up
+            if error
+                .error=error
+            if success
+                .success=success
